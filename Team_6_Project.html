@@ -1,0 +1,139 @@
+--Notes: <br>
+Names: Brian Ching, Sarah, Mingyuan, Faris <br>
+Date: 11/16/16 <br>
+Title: Database Project <br>
+Class: CSC-351 <br>
+*******************************************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Team 6 Database Project</title>
+	</head>
+	
+	<body>
+	
+		<script>
+		
+			function submit_click(){
+				document.getElementById("content").innerHTML = "Welcome, User!<br><br>";
+				
+				var signInButton = document.createElement("BUTTON");
+				var text = document.createTextNode("Sign In");
+				signInButton.appendChild(text);
+				signInButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(signInButton);
+				
+				var passwordButton = document.createElement("BUTTON");
+				var text2 = document.createTextNode("Change Password");
+				passwordButton.appendChild(text2);
+				passwordButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(passwordButton);
+				
+				var checkedOutButton = document.createElement("BUTTON");
+				var text3 = document.createTextNode("Checked-Out Books");
+				checkedOutButton.appendChild(text3);
+				checkedOutButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(checkedOutButton);
+				
+				var searchButton = document.createElement("BUTTON");
+				var text4 = document.createTextNode("Search For Books");
+				searchButton.appendChild(text4);
+				searchButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(searchButton);
+				
+			}
+			
+			function submit_click2(){
+				document.getElementById("content").innerHTML = "Welcome, Librarian!<br><br>";
+				
+				var signInButton = document.createElement("BUTTON");
+				var text = document.createTextNode("Sign In");
+				signInButton.appendChild(text);
+				signInButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(signInButton);
+				
+				var passwordButton = document.createElement("BUTTON");
+				var text2 = document.createTextNode("Change Password");
+				passwordButton.appendChild(text2);
+				passwordButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(passwordButton);
+				
+				var listButton = document.createElement("BUTTON");
+				var text3 = document.createTextNode("List Checked-Out Books");
+				listButton.appendChild(text3);
+				listButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(listButton);
+				
+				var checkOutButton = document.createElement("BUTTON");
+				var text4 = document.createTextNode("Check Out A Book");
+				checkOutButton.appendChild(text4);
+				checkOutButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(checkOutButton);
+				
+				var returnButton = document.createElement("BUTTON");
+				var text5 = document.createTextNode("Return A Book");
+				returnButton.appendChild(text5);
+				returnButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(returnButton);
+				
+				var deleteButton = document.createElement("BUTTON");
+				var text6 = document.createTextNode("Delete A Book");
+				deleteButton.appendChild(text6);
+				deleteButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(deleteButton);
+				
+				var addButton = document.createElement("BUTTON");
+				var text7 = document.createTextNode("Add A Book");
+				addButton.appendChild(text7);
+				addButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(addButton);
+				
+				var searchButton = document.createElement("BUTTON");
+				var text8 = document.createTextNode("Search For Checked-Out Books");
+				searchButton.appendChild(text8);
+				searchButton.onclick = function(){
+					//Need more details here before proceeding
+				};
+				document.getElementById("content").appendChild(searchButton);
+			}
+			
+		</script>
+	
+		<div id="header">
+			<h1>Team 6 Database Project</h1>
+		</div>
+		
+		<div id="content">
+			<h2>What type of person are you?</h2>
+			<button type='submit' id='choice1' onclick="submit_click()">User</button>
+			<button type='submit' id='choice2' onclick="submit_click2()">Librarian</button>
+		</div>
+		
+	</body>
+	
+</html>
