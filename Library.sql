@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
-<<<<<<< HEAD
 -- Generation Time: Nov 13, 2016 at 08:31 PM
-=======
--- Generation Time: Nov 04, 2016 at 01:34 AM
->>>>>>> origin/master
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -62,10 +58,6 @@ CREATE TABLE `check_outs` (
   `serial_number` int(11) NOT NULL,
   `member_id` int(11) NOT NULL,
   `check_out_date` date NOT NULL,
-<<<<<<< HEAD
-=======
-  `return_date` date NOT NULL,
->>>>>>> origin/master
   `due_date` date NOT NULL,
   `return_condition` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -102,10 +94,7 @@ CREATE TABLE `ElectronicCopy` (
 CREATE TABLE `Employee` (
   `employee_id` int(11) NOT NULL,
   `SSN` int(11) NOT NULL,
-<<<<<<< HEAD
   `password` int(20) NOT NULL,
-=======
->>>>>>> origin/master
   `name` char(50) NOT NULL,
   `phone` int(11) NOT NULL,
   `position` char(50) NOT NULL,
@@ -121,10 +110,7 @@ CREATE TABLE `Employee` (
 
 CREATE TABLE `Member` (
   `member_id` int(11) NOT NULL,
-<<<<<<< HEAD
   `password` int(20) NOT NULL,
-=======
->>>>>>> origin/master
   `phone` int(11) NOT NULL,
   `first_name` char(50) NOT NULL,
   `last_name` char(50) NOT NULL,
