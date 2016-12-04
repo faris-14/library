@@ -44,7 +44,7 @@
         $result = mysqli_query($conn,$sql3);
         if (!$result)
             die("Update copy Failed.");
-        echo "<script>alert('Check out succesfully!!');location.href='employeeIndex.php';</script>";
+        echo "<script>alert('Checkout Successful!!');location.href='employeeIndex.php';</script>";
     }
 		mysqli_free_result($result);
 

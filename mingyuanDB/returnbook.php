@@ -28,7 +28,7 @@
     if (!$result)
         die("Query2 Failed.");
 
-    echo "<script>alert('Return book successfully');location.href='employeeIndex.php';</script>";
+    echo "<script>alert('Returned book successfully');location.href='employeeIndex.php';</script>";
 
 		mysqli_free_result($result);
 

@@ -22,7 +22,7 @@
 
 
 <script type="text/javascript" src="js/functions.js"></script>
-<title>Search Result</title>
+<title>Search Results</title>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 	else if($searchtype==5)
 		$sql = "select book.book_id as book_id,title,year,publisher.name as p_name,first_name,last_name,subject.name as s_name, parent, available,serial_number
                 from book,publisher,author,subject,copy where book.book_id=copy.book_id and book.subject_id=subject.subject_id and book.Author_id=author.Author_id and book.publisher_id=publisher.publisher_id
-                and (subject.name like '%$keyword%' or author.first_name like '%$keyword%' or last_name like '%$keyword%' or title like '%$keyword%' or publisher.name like '%$keyword%')";
+                and (subject.name like '%$keyword%' or author.first_name like '%$keyword%' or author.last_name like '%$keyword%' or title like '%$keyword%' or publisher.name like '%$keyword%')";
     $result = mysqli_query($conn,$sql);
     if (!$result)
          die("Query Failed.");

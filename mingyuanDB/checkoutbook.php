@@ -24,7 +24,7 @@
     ?>
     <div class="container">
         <div class="jumbotron">
-            <h2>Check out to whom?</h2>
+            <h2>Checkout to whom?</h2>
             <hr />
             <form action="confirmcheckout.php" method="post">
                 <div class="form-group">                    

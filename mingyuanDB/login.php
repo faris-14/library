@@ -18,7 +18,7 @@
 <?php 
 session_start();
 if(isset($_SESSION["InvalidUser"])&&$_SESSION["InvalidUser"] =="yes"){
-  echo "<div class='alert alert-danger' role='alert' >Wrong email or password</div>";
+  echo "<div class='alert alert-danger' role='alert' >Wrong user id or password</div>";
   $_SESSION["InvalidUser"] ="no";
 }
 

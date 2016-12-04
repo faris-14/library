@@ -20,9 +20,9 @@
 <div class="container">
   <div class="jumbotron">
     <form action="register_connect.php" method="post" onsubmit="return errorcheck();">
-    <h2>Sign up as a new member</h2>
+    <h2>Signup as a New Member</h2>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="exampleInputEmail1">Email Address</label>
         <input type="email" class="form-control" id="email" placeholder="Email" name="email" required="true">
       </div>
       <div class="form-group">
@@ -30,11 +30,11 @@
         <input type="password" class="form-control" id="passwd" placeholder="Password" name="passwd" required="true">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">First name</label>
+        <label for="exampleInputEmail1">First Name</label>
         <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" required="true"> 
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Last name</label>
+        <label for="exampleInputEmail1">Last Name</label>
         <input type="text" class="form-control" id="lastname" placeholder="Lastname" name="lastname" required="true">
       </div>
       <div class="form-group">
@@ -42,17 +42,17 @@
         <input type="text" class="form-control" id="address" placeholder="Address" name="address">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Phone</label>
+        <label for="exampleInputEmail1">Phone (no space or dashes)</label>
         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone">
       </div>
      
-      <div class="alert alert-danger" role="alert" id="errormsg">Your enter something wrong</div>      
+      <div class="alert alert-danger" role="alert" id="errormsg">Your entered something wrong</div>      
       
       <button type="submit" class="btn btn-default">Submit</button>
       <button type="reset" class="btn btn-default">Reset</button>
       <br />
       <hr />
-      <a href="index.php">Already have account?Login?</a>
+      <a href="index.php">Already have and account? Login</a>
     </form>
   </div>
 </div>

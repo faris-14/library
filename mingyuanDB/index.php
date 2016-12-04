@@ -37,7 +37,7 @@
             <hr />
             <form action="changepasswd.php" method="post">
                 <div class="form-group">
-                    <label for="exampleInputPassword">Change your password here</label>
+                    <label for="exampleInputPassword">Change Password Here</label>
                     <input type="password" class="form-control" id="newpassword" placeholder="New password" name="newpassword" required="true" />
                     <button type="submit" class="btn btn-default">Submit new password</button>
                 </div>
@@ -45,9 +45,9 @@
             <hr />
             <form action="search.php" method="post">
                 <div class="form-group">
-                    <label for="exampleInputType">Search your book by Category</label>
+                    <label for="exampleInputType">Search Books by Category</label>
                     <select class="form-control" name="searchtype">
-                        <option value="1">Auther</option>
+                        <option value="1">Author</option>
                         <option value="2">Title</option>
                         <option value="3">Publisher</option>
                         <option value="4">Subject</option>
@@ -78,9 +78,9 @@ require 'database/connect.php';
   }
   else{
    //*** start a new session
-	  echo "<h3>Check out lists</h3>";
+	  echo "<h3>Checkout List</h3>";
       echo "<table class='table'>";
-      echo        "<tr><td>ISN</td><td>Book Title</td><td>Check out date</td><td>Due date</td></tr>";
+      echo        "<tr><td>ISBN</td><td>Book Title</td><td>Checkout Date</td><td>Due Date</td></tr>";
       while($row = $result->fetch_assoc()) {
         echo "<tr><td>" . $row["book_id"]. " </td><td> " . $row["title"]. "</td><td>". $row["check_out_date"]. "</td><td>" . $row["due_date"]. "</td><tr>";
     }

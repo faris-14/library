@@ -29,6 +29,7 @@
     $sql1 = "select * from author where first_name ='$author_firstname' and last_name = '$author_lastname'";
     $sql2 = "select * from publisher where name='$publisher'";
     $sql3 = "select * from subject where name='$subject'";
+	$sql4 = "select max(copy_seq_id) from copy where book_id = '$book_id'";
 
     //************************************
     //check the book if it exists
@@ -37,8 +38,22 @@
     if (!$result)
         die("Search book query Failed.");
     if (mysqli_num_rows($result) > 0){
-		echo "<script>alert('This book already exists!');location.href='javascript:history.back(-1)';</script>";
-        exit;
+		//Add Copies 
+		$result = mysqli_query($conn,$sql4);
+		$num = $result ->fetch_assoc();
+		$num = (int)$num + 1;
+		$stop = ((int) $num + (int) $copy_number);
+		for($i = $num; $i< $stop; $i++){
+			$j = $num +1;
+			$sql = "insert into copy (book_id,copy_seq_id,available) values ('$book_id',$j,'Yes')";
+			$result = mysqli_query($conn,$sql);
+			//*** die if no result
+			if (!$result)
+				die("Insert copy query Failed.");
+			//echo "insert copy:".$book_id."<br/>";
+		}
+			echo "<script>alert('Copies added successfully!');location.href='javascript:history.back(-1)';</script>";
+			exit;
     }
 
     //************************************
@@ -139,7 +154,7 @@
         //echo "insert copy:".$book_id."<br/>";
     }
     
-	echo "<script>alert('Book has been inserted succeshully');location.href='employeeIndex.php';</script>";
+	echo "<script>alert('Book has been inserted successfully');location.href='employeeIndex.php';</script>";
 	mysqli_free_result($result);
 
  	   //*** close this connection

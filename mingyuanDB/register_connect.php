@@ -31,7 +31,7 @@
          session_start();
 
          //*** set a session variable
-         $_SESSION["ValidUser"] = $email;
+         $_SESSION["ValidUser"] = $first_name;
 		 
          //*** redirect when all is well; otherwise, loop here
         

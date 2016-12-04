@@ -34,7 +34,7 @@
     if (!$result)
          die("Search copy query Failed.");
     if (mysqli_num_rows($result) > 0){
-		echo "<script>alert('Some book has been borrowed out, can not be deleted!');location.href='employeeIndex.php';</script>";
+		echo "<script>alert('Book has been borrowed out, cannot be deleted!');location.href='employeeIndex.php';</script>";
         exit;
     }
     $result = mysqli_query($conn,$sql2);

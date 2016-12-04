@@ -35,7 +35,7 @@
             <a href="logout.php"><button type="button" class="btn btn-default">Log out</button></a>
 
             <hr />
-            <h3>Change your password here</h3>
+            <h3>Change Password Here</h3>
             <form action="changepasswd.php" method="post">
                 <div class="form-group">
                     <label for="exampleInputPassword"></label>
@@ -46,13 +46,13 @@
                 </div>
             </form>
             <hr />
-            <h3>Search your book by Category</h3>
+            <h3>Search Books by Category</h3>
             <form action="employeeSearch.php" method="get">
                 <div class="form-group">
                     <label for="exampleInputType"></label>
                     <select class="form-control" name="searchtype">
                         <option value="2">Title</option>
-                        <option value="1">Auther</option>                        
+                        <option value="1">Author</option>                        
                         <option value="3">Publisher</option>
                         <option value="4">Subject</option>
                         <option value="5">Keyword</option>
@@ -69,8 +69,8 @@
 
             <hr />
 
-            <h3>Checkout list</h3>              
-            <a href='checkoutlist.php'><button class='btn btn-default'>See all user's checkout list</button></a>               
+            <h3>Checkout List</h3>              
+            <a href='checkoutlist.php'><button class='btn btn-default'>See all users' checkouts</button></a>               
             <form action="searchcheckout.php" method="get">
                 <div class="form-group">
                     <label for="exampleInputUserId">Search for books checked out by a particular user</label>
@@ -83,10 +83,10 @@
                 <hr />
 
 
-                <h3>Add a book to Circulation</h3>
+                <h3>Add a Book to Circulation</h3>
                 <form action="addbook.php" method="post">
                     <div class="form-group">
-                        <label for="exampleInputType">ISN</label>
+                        <label for="exampleInputType">ISBN</label>
                         <input type="text" class="form-control" placeholder="" name="book_id" required="true" />
                     </div>
                     <div class="form-group">
@@ -102,7 +102,7 @@
                         <input type="text" class="form-control" id="publisher" placeholder="" name="publisher" required="true" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputType">Publisher's city</label>
+                        <label for="exampleInputType">Publisher's City</label>
                         <input type="text" class="form-control" placeholder="" name="city" required="true" />
                     </div>
                     <div class="form-group">
@@ -114,11 +114,11 @@
                         <input type="text" class="form-control" placeholder="" name="subject" required="true" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputType">Subject's parent</label>
+                        <label for="exampleInputType">Parent Subject</label>
                         <input type="text" class="form-control" placeholder="" name="parent" required="true" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputType">Copy number</label>
+                        <label for="exampleInputType">Number of Copies</label>
                         <input type="text" class="form-control" placeholder="" name="copy_number" required="true" />
                     </div>
                     <div class="form-group">
@@ -126,10 +126,10 @@
                     </div>
 
                 </form>
-                <h3>Delete a book to Circulation</h3>
+                <h3>Take a Book Out of Circulation</h3>
                 <form action="deletebook.php" method="post">
                     <div class="form-group">
-                        <label for="exampleInputType">Book Id</label>
+                        <label for="exampleInputType">Serial Number</label>
                         <input type="text" class="form-control" placeholder="" name="book_id" required="true" />
                     </div>
                     <div class="form-group">
