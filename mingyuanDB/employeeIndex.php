@@ -129,7 +129,7 @@
                 <h3>Take a Book Out of Circulation</h3>
                 <form action="deletebook.php" method="post">
                     <div class="form-group">
-                        <label for="exampleInputType">Serial Number</label>
+                        <label for="exampleInputType">Book ID</label>
                         <input type="text" class="form-control" placeholder="" name="book_id" required="true" />
                     </div>
                     <div class="form-group">

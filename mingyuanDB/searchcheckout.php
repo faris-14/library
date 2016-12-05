@@ -21,7 +21,7 @@ require 'database/connect.php';
 $member_id = $_REQUEST['member_id'];
 $sql = "select * from check_outs,copy,book where book.book_id = copy.book_id and copy.serial_number = check_outs.serial_number and member_id = '$member_id'";
 $result = mysqli_query($conn,$sql);
-echo "<h3>Member ID ".$member_id." Check out lists</h3>";
+echo "<h3>Member ID ".$member_id." Checkout List</h3>";
 echo "<a href='employeeIndex.php'><button class='btn btn-default'>Back</button></a>";
 if (!$result)
     die("Query Failed.");
@@ -34,7 +34,7 @@ if (mysqli_num_rows($result) == 0){
 else{
     //*** start a new session
     echo "<table class='table'>";
-    echo        "<tr><td>ISN</td><td>Book Title</td><td>Borrower</td><td>Check out date</td><td>Due date</td><td></td></tr>";
+    echo        "<tr><td>ISBN</td><td>Book Title</td><td>Borrower</td><td>Checkout Date</td><td>Due Date</td><td></td></tr>";
     while($row = $result->fetch_assoc()) {
 		echo "<form action='returnbook.php' method='post'><input type='text' name='serial_number' style='display:none;' value=".$row["serial_number"]." />";
         echo "<tr><td>" .

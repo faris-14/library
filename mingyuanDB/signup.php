@@ -46,7 +46,7 @@
         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone">
       </div>
      
-      <div class="alert alert-danger" role="alert" id="errormsg">Your entered something wrong</div>      
+      <div class="alert alert-danger" role="alert" id="errormsg">You entered something wrong</div>      
       
       <button type="submit" class="btn btn-default">Submit</button>
       <button type="reset" class="btn btn-default">Reset</button>
