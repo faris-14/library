@@ -28,12 +28,17 @@
          echo "Error: ". $conn->error;
 	else{ 
 	 //*** start a new session
-         session_start();
-
-         //*** set a session variable
-         $_SESSION["ValidUser"] = $first_name;
+        session_start();
+        $sql = "select * from member where email = '$email' and password = '$passwd' and first_name = '$firstname'";
+        $result = mysqli_query($conn,$sql);
+        if (!$result)
+         echo "Error: ". $conn->error;
+        $row = mysqli_fetch_assoc($result);
+        //*** set a session variable
+        $_SESSION["ValidUser"] = $row['first_name'];
+        $_SESSION["UserId"] = $row['member_id'];
 		 
-         //*** redirect when all is well; otherwise, loop here
+        //*** redirect when all is well; otherwise, loop here
         
        //*** redirect somewhere
        header("Location: index.php");
