@@ -1,6 +1,6 @@
 --Notes: <br>
 Names: Brian Ching, Sarah, Mingyuan, Faris <br>
-Date: 11/16/16 <br>
+Date: 12/6/16 <br>
 Title: Database Project <br>
 Class: CSC-351 <br>
 *******************************************************************************************************************
@@ -18,108 +18,351 @@ Class: CSC-351 <br>
 		<script>
 		
 			function submit_click(){
+			
 				document.getElementById("content").innerHTML = "Welcome, User!<br><br>";
 				
+				
+				//sign in option
 				var signInButton = document.createElement("BUTTON");
 				var text = document.createTextNode("Sign In");
 				signInButton.appendChild(text);
 				signInButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var usernameField = document.createElement("p");
+					var usernameText = document.createTextNode("Username: ");
+					usernameField.appendChild(usernameText);
+					var input = document.createElement("input");
+					usernameField.appendChild(input);
+					document.getElementById("content").appendChild(usernameField);
+					
+					var passwordField = document.createElement("p");
+					var passwordText = document.createTextNode("Password: ");
+					passwordField.appendChild(passwordText);
+					var input2 = document.createElement("input");
+					passwordField.appendChild(input2);
+					document.getElementById("content").appendChild(passwordField);
+					
+					var logInButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Log In");
+					logInButton.appendChild(text);
+					document.getElementById("content").appendChild(logInButton);
+					
+					var username = input.value;
+					var password = input2.value;
+					logInButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?username=" + username + "&password=" + password;
+					}
+					
+					signInButton.onclick = null;
 				};
 				document.getElementById("content").appendChild(signInButton);
 				
+				
+				//change password option
 				var passwordButton = document.createElement("BUTTON");
 				var text2 = document.createTextNode("Change Password");
 				passwordButton.appendChild(text2);
 				passwordButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var newPassField = document.createElement("p");
+					var newPassText = document.createTextNode("New Password: ");
+					newPassField.appendChild(newPassText);
+					var input = document.createElement("input");
+					newPassField.appendChild(input);
+					document.getElementById("content").appendChild(newPassField);
+					
+					var confirmField = document.createElement("p");
+					var confirmText = document.createTextNode("Confirm New Password: ");
+					confirmField.appendChild(confirmText);
+					var input2 = document.createElement("input");
+					confirmField.appendChild(input2);
+					document.getElementById("content").appendChild(confirmField);
+					
+					var changeButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Change Password");
+					changeButton.appendChild(text);
+					document.getElementById("content").appendChild(changeButton);
+					
+					var newPassword = input.value;
+					var confirmPassword = input2.value;
+					changeButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?newPassword=" + newPassword + "&confirmPassword=" + confirmPassword;
+					}
+					
+					passwordButton.onclick = null;
 				};
 				document.getElementById("content").appendChild(passwordButton);
 				
+				
+				//checked out option
 				var checkedOutButton = document.createElement("BUTTON");
 				var text3 = document.createTextNode("Checked-Out Books");
 				checkedOutButton.appendChild(text3);
 				checkedOutButton.onclick = function(){
-					//Need more details here before proceeding
+					window.location.href = "http:// insert name of file here";
 				};
 				document.getElementById("content").appendChild(checkedOutButton);
 				
+				
+				//search option
 				var searchButton = document.createElement("BUTTON");
 				var text4 = document.createTextNode("Search For Books");
 				searchButton.appendChild(text4);
 				searchButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var searchField = document.createElement("p");
+					var searchText = document.createTextNode("Keyword: ");
+					searchField.appendChild(searchText);
+					var input = document.createElement("input");
+					searchField.appendChild(input);
+					document.getElementById("content").appendChild(searchField);
+					
+					var searchBookButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Search");
+					searchBookButton.appendChild(text);
+					document.getElementById("content").appendChild(searchBookButton);
+					
+					var keyword = input.value;
+					searchBookButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?keyword=" + keyword;
+					}
+					searchButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(searchButton);
 				
 			}
 			
 			function submit_click2(){
+			
 				document.getElementById("content").innerHTML = "Welcome, Librarian!<br><br>";
 				
+				
+				//sign in option
 				var signInButton = document.createElement("BUTTON");
 				var text = document.createTextNode("Sign In");
 				signInButton.appendChild(text);
 				signInButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var usernameField = document.createElement("p");
+					var usernameText = document.createTextNode("Username: ");
+					usernameField.appendChild(usernameText);
+					var input = document.createElement("input");
+					usernameField.appendChild(input);
+					document.getElementById("content").appendChild(usernameField);
+					
+					var passwordField = document.createElement("p");
+					var passwordText = document.createTextNode("Password: ");
+					passwordField.appendChild(passwordText);
+					var input2 = document.createElement("input");
+					passwordField.appendChild(input2);
+					document.getElementById("content").appendChild(passwordField);
+					
+					var logInButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Log In");
+					logInButton.appendChild(text);
+					document.getElementById("content").appendChild(logInButton);
+					
+					var username = input.value;
+					var password = input2.value;
+					logInButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?username=" + username + "&password=" + password;
+					}
+					
+					signInButton.onclick = null;
 				};
 				document.getElementById("content").appendChild(signInButton);
 				
+				
+				//change password option
 				var passwordButton = document.createElement("BUTTON");
 				var text2 = document.createTextNode("Change Password");
 				passwordButton.appendChild(text2);
 				passwordButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var newPassField = document.createElement("p");
+					var newPassText = document.createTextNode("New Password: ");
+					newPassField.appendChild(newPassText);
+					var input = document.createElement("input");
+					newPassField.appendChild(input);
+					document.getElementById("content").appendChild(newPassField);
+					
+					var confirmField = document.createElement("p");
+					var confirmText = document.createTextNode("Confirm New Password: ");
+					confirmField.appendChild(confirmText);
+					var input2 = document.createElement("input");
+					confirmField.appendChild(input2);
+					document.getElementById("content").appendChild(confirmField);
+					
+					var changeButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Change Password");
+					changeButton.appendChild(text);
+					document.getElementById("content").appendChild(changeButton);
+					
+					var newPassword = input.value;
+					var confirmPassword = input2.value;
+					changeButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?newPassword=" + newPassword + "&confirmPassword=" + confirmPassword;
+					}
+					
+					passwordButton.onclick = null;
 				};
 				document.getElementById("content").appendChild(passwordButton);
 				
+				
+				//list option
 				var listButton = document.createElement("BUTTON");
 				var text3 = document.createTextNode("List Checked-Out Books");
 				listButton.appendChild(text3);
 				listButton.onclick = function(){
-					//Need more details here before proceeding
+					window.location.href = "http:// insert name of file here ";
 				};
 				document.getElementById("content").appendChild(listButton);
 				
+				
+				//check out option
 				var checkOutButton = document.createElement("BUTTON");
 				var text4 = document.createTextNode("Check Out A Book");
 				checkOutButton.appendChild(text4);
 				checkOutButton.onclick = function(){
-					//Need more details here before proceeding
+					
+					var checkOutField = document.createElement("p");
+					var checkOutText = document.createTextNode("Title of Book: ");
+					checkOutField.appendChild(checkOutText);
+					var input = document.createElement("input");
+					checkOutField.appendChild(input);
+					document.getElementById("content").appendChild(checkOutField);
+					
+					var checkOUButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Check Out");
+					checkOUButton.appendChild(text);
+					document.getElementById("content").appendChild(checkOUButton);
+					
+					var checkOut = input.value;
+					checkOUButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?checkOut=" + checkOut;
+					}
+					
+					checkOutButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(checkOutButton);
 				
+				
+				//return option
 				var returnButton = document.createElement("BUTTON");
 				var text5 = document.createTextNode("Return A Book");
 				returnButton.appendChild(text5);
 				returnButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var returnField = document.createElement("p");
+					var returnText = document.createTextNode("Title of Book: ");
+					returnField.appendChild(returnText);
+					var input = document.createElement("input");
+					returnField.appendChild(input);
+					document.getElementById("content").appendChild(returnField);
+					
+					var returnBookButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Return");
+					returnBookButton.appendChild(text);
+					document.getElementById("content").appendChild(returnBookButton);
+					
+					var returnBook = input.value;
+					returnBookButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?returnBook=" + returnBook;
+					}
+					
+					returnButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(returnButton);
 				
+				
+				//delete option
 				var deleteButton = document.createElement("BUTTON");
 				var text6 = document.createTextNode("Delete A Book");
 				deleteButton.appendChild(text6);
 				deleteButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var deleteField = document.createElement("p");
+					var deleteText = document.createTextNode("Title of Book: ");
+					deleteField.appendChild(deleteText);
+					var input = document.createElement("input");
+					deleteField.appendChild(input);
+					document.getElementById("content").appendChild(deleteField);
+					
+					var deleteBookButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Delete");
+					deleteBookButton.appendChild(text);
+					document.getElementById("content").appendChild(deleteBookButton);
+					
+					var deleteBook = input.value;
+					deleteBookButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?deleteBook=" + deleteBook;
+					}
+					
+					deleteButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(deleteButton);
 				
+				
+				//add option
 				var addButton = document.createElement("BUTTON");
 				var text7 = document.createTextNode("Add A Book");
 				addButton.appendChild(text7);
 				addButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var addField = document.createElement("p");
+					var addText = document.createTextNode("Title of Book: ");
+					addField.appendChild(addText);
+					var input = document.createElement("input");
+					addField.appendChild(input);
+					document.getElementById("content").appendChild(addField);
+					
+					var addBookButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Add");
+					addBookButton.appendChild(text);
+					document.getElementById("content").appendChild(addBookButton);
+					
+					var addBook = input.value;
+					addBookButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?addBook=" + addBook;
+					}
+					
+					addButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(addButton);
 				
+				
+				//search option
 				var searchButton = document.createElement("BUTTON");
 				var text8 = document.createTextNode("Search For Checked-Out Books");
 				searchButton.appendChild(text8);
 				searchButton.onclick = function(){
-					//Need more details here before proceeding
+				
+					var searchField = document.createElement("p");
+					var searchText = document.createTextNode("Keyword: ");
+					searchField.appendChild(searchText);
+					var input = document.createElement("input");
+					searchField.appendChild(input);
+					document.getElementById("content").appendChild(searchField);
+					
+					var searchBookButton = document.createElement("BUTTON");
+					var text = document.createTextNode("Search");
+					searchBookButton.appendChild(text);
+					document.getElementById("content").appendChild(searchBookButton);
+					
+					var keyword = input.value;
+					searchBookButton.onclick = function(){
+						window.location.href = "http:// insert name of file here ?keyword=" + keyword;
+					}
+					searchButton.onclick = null;
+					
 				};
 				document.getElementById("content").appendChild(searchButton);
+				
 			}
 			
 		</script>
